@@ -6,19 +6,350 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Verto</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+  <link rel="icon" href="">
 </head>
 
 <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Introducing Verto
-      </h1>
-      <p class="subtitle">
-        Coming soon!
+  <section class="hero is-fullheight is-dark" id="landing">
+    <div class="hero-head">
+      <div class="container">
+        <p class="subtitle glitch is-hidden-mobile" data-text="$VTO" style="float: left;">
+          $VTO
+        </p>
+        <p class="has-text-right" style="margin-top: 10px !important;">
+          <a href="https://github.com/useverto" class="subtitle ">
+            git
+          </a>
+        </p>
+      </div>
+    </div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-2 is-hidden-mobile">
+            <img src="./static/images/verto.svg" alt="Verto logo" class="verto-logo">
+          </div>
+          <div class="column">
+            <p class="subtitle">
+              introducing
+            </p>
+            <h1 class="title is-1">
+              Verto.
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-foot">
+      <p class="subtitle has-text-centered" style="font-size: 0.9em; margin-bottom: 10px">
+        a completely decentralized profit sharing token exchange
       </p>
     </div>
   </section>
 </body>
+
+<style>
+  @import url('https://rsms.me/inter/inter.css');
+
+  @font-face {
+    font-family: 'JetBrainsMono';
+    src:
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'JetBrainsMono', serif !important;
+    background-color: black !important;
+  }
+
+  @supports (font-variation-settings: normal) {
+    body {
+      font-family: 'Inter var', sans-serif;
+    }
+  }
+
+  .title {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700;
+  }
+
+  #landing {
+    background-image: url(./static/images/earth.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+  }
+
+  #landing .title.is-1 {
+    font-size: 100px !important;
+  }
+
+  .verto-logo {
+    max-height: 120px;
+  }
+
+  /* Courtesy to https://css-tricks.com/glitch-effect-text-images-svg/ */
+
+  @keyframes noise-anim {
+    0% {
+      clip-path: inset(86% 0 10% 0);
+    }
+
+    5% {
+      clip-path: inset(62% 0 30% 0);
+    }
+
+    10% {
+      clip-path: inset(36% 0 25% 0);
+    }
+
+    15% {
+      clip-path: inset(97% 0 1% 0);
+    }
+
+    20% {
+      clip-path: inset(4% 0 18% 0);
+    }
+
+    25% {
+      clip-path: inset(56% 0 26% 0);
+    }
+
+    30% {
+      clip-path: inset(75% 0 13% 0);
+    }
+
+    35% {
+      clip-path: inset(68% 0 14% 0);
+    }
+
+    40% {
+      clip-path: inset(6% 0 34% 0);
+    }
+
+    45% {
+      clip-path: inset(89% 0 3% 0);
+    }
+
+    50% {
+      clip-path: inset(26% 0 61% 0);
+    }
+
+    55% {
+      clip-path: inset(14% 0 71% 0);
+    }
+
+    60% {
+      clip-path: inset(62% 0 16% 0);
+    }
+
+    65% {
+      clip-path: inset(25% 0 19% 0);
+    }
+
+    70% {
+      clip-path: inset(93% 0 7% 0);
+    }
+
+    75% {
+      clip-path: inset(64% 0 23% 0);
+    }
+
+    80% {
+      clip-path: inset(46% 0 46% 0);
+    }
+
+    85% {
+      clip-path: inset(9% 0 68% 0);
+    }
+
+    90% {
+      clip-path: inset(87% 0 13% 0);
+    }
+
+    95% {
+      clip-path: inset(75% 0 13% 0);
+    }
+
+    100% {
+      clip-path: inset(42% 0 26% 0);
+    }
+  }
+
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 red;
+    top: 0;
+    color: white;
+    background: black;
+    overflow: hidden;
+    animation: noise-anim 2s infinite linear alternate-reverse;
+  }
+
+  @keyframes noise-anim-2 {
+    0% {
+      clip-path: inset(59% 0 26% 0);
+    }
+
+    5% {
+      clip-path: inset(17% 0 43% 0);
+    }
+
+    10% {
+      clip-path: inset(27% 0 56% 0);
+    }
+
+    15% {
+      clip-path: inset(4% 0 49% 0);
+    }
+
+    20% {
+      clip-path: inset(21% 0 37% 0);
+    }
+
+    25% {
+      clip-path: inset(30% 0 19% 0);
+    }
+
+    30% {
+      clip-path: inset(84% 0 14% 0);
+    }
+
+    35% {
+      clip-path: inset(8% 0 44% 0);
+    }
+
+    40% {
+      clip-path: inset(31% 0 17% 0);
+    }
+
+    45% {
+      clip-path: inset(86% 0 6% 0);
+    }
+
+    50% {
+      clip-path: inset(32% 0 45% 0);
+    }
+
+    55% {
+      clip-path: inset(19% 0 76% 0);
+    }
+
+    60% {
+      clip-path: inset(20% 0 2% 0);
+    }
+
+    65% {
+      clip-path: inset(62% 0 34% 0);
+    }
+
+    70% {
+      clip-path: inset(5% 0 9% 0);
+    }
+
+    75% {
+      clip-path: inset(6% 0 6% 0);
+    }
+
+    80% {
+      clip-path: inset(40% 0 14% 0);
+    }
+
+    85% {
+      clip-path: inset(25% 0 69% 0);
+    }
+
+    90% {
+      clip-path: inset(82% 0 5% 0);
+    }
+
+    95% {
+      clip-path: inset(55% 0 40% 0);
+    }
+
+    100% {
+      clip-path: inset(57% 0 37% 0);
+    }
+  }
+
+  .glitch::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 blue;
+    top: 0;
+    color: white;
+    background: black;
+    overflow: hidden;
+    animation: noise-anim-2 15s infinite linear alternate-reverse;
+  }
+
+  /* Courtesy to https://stackoverflow.com/a/11681331/10350213 */
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Opera < 12.1 */
+  @-o-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+</style>
 
 </html>
